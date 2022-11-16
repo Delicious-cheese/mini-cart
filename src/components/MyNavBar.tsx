@@ -15,7 +15,7 @@ const MyNavBar = () => {
                 <Nav className="me-auto">
                     <Nav.Link to='/' as={NavLink}>主页</Nav.Link>
                     <Nav.Link to='clothes' as={NavLink} >衣服</Nav.Link>
-                    <Nav.Link to='/electrical' as={NavLink}>电器</Nav.Link>
+                    <Nav.Link to='/electronic' as={NavLink}>电器</Nav.Link>
                     <Nav.Link to='/gift' as={NavLink}>纪念品</Nav.Link>
                 </Nav>
                 <Button

@@ -4,11 +4,11 @@ import Col from 'react-bootstrap/Col';
 import data from '../data.json'
 import GoodItem from './GoodItem';
 
-const Gift = () => {
+const Electronic = () => {
     return (
         <Container className='pt-3'>
             <Row lg={3} md={2} xs={1} className="g-3">
-                {data["gift"].map(item => (
+                {data["electronic"].map(item => (
                     <Col key={item.id} >
                         <GoodItem {...item} />
                     </Col>
@@ -18,4 +18,4 @@ const Gift = () => {
     )
 }
 
-export default Gift
+export default Electronic
