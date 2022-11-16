@@ -2,6 +2,8 @@ import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 import imgLogo from '../assets/tao.png'
 import Button from 'react-bootstrap/Button';
+import Nav from 'react-bootstrap/Nav';
+import { NavLink } from 'react-router-dom'
 
 const MyNavBar = () => {
     return (
@@ -10,6 +12,12 @@ const MyNavBar = () => {
                 <Navbar.Brand href="/">
                     <img src={imgLogo} height="30" alt="" />
                 </Navbar.Brand>
+                <Nav className="me-auto">
+                    <Nav.Link to='/' as={NavLink}>主页</Nav.Link>
+                    <Nav.Link to='clothes' as={NavLink} >衣服</Nav.Link>
+                    <Nav.Link to='/electrical' as={NavLink}>电器</Nav.Link>
+                    <Nav.Link to='/gift' as={NavLink}>纪念品</Nav.Link>
+                </Nav>
                 <Button
                     variant="outline-warning"
                     className='rounded-circle d-flex justify-content-center align-items-center'
