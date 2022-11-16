@@ -1,12 +1,11 @@
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
-import Nav from 'react-bootstrap/Nav';
 import imgLogo from '../assets/tao.png'
 import Button from 'react-bootstrap/Button';
 
 const MyNavBar = () => {
     return (
-        <Navbar style={{ height: '60px' }}>
+        <Navbar bg="light" style={{ height: '60px' }}>
             <Container>
                 <Navbar.Brand href="/">
                     <img src={imgLogo} height="30" alt="" />
