@@ -11,7 +11,7 @@ const Clothes = () => {
             <Row lg={3} md={2} xs={1} className="g-3">
                 {data["clothes"].map(item => (
                     <Col key={item.id} >
-                        <GoodItem {...item} />
+                        <GoodItem {...item} type="clothes" />
                     </Col>
                 ))}
             </Row>

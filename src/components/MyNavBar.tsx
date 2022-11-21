@@ -14,7 +14,7 @@ const MyNavBar = () => {
 
     return (
         <div>
-            <Navbar bg="light" style={{ height: '60px' }}>
+            <Navbar bg="light" style={{ height: '60px', position: 'relative' }}>
                 <Container>
                     <Navbar.Brand href="/">
                         <img src={imgLogo} height="30" alt="" />
