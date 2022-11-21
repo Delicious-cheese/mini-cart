@@ -10,7 +10,7 @@ const Electronic = () => {
             <Row lg={3} md={2} xs={1} className="g-3">
                 {data["electronic"].map(item => (
                     <Col key={item.id} >
-                        <GoodItem {...item} />
+                        <GoodItem {...item} type="electronic" />
                     </Col>
                 ))}
             </Row>

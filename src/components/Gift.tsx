@@ -10,7 +10,7 @@ const Gift = () => {
             <Row lg={3} md={2} xs={1} className="g-3">
                 {data["gift"].map(item => (
                     <Col key={item.id} >
-                        <GoodItem {...item} />
+                        <GoodItem {...item} type="gift" />
                     </Col>
                 ))}
             </Row>

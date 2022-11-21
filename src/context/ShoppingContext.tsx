@@ -16,7 +16,8 @@ interface ShoppingFn {
     subGood: (id: number) => void,
     getTotalCount: () => number,
     clearCar: () => void,
-    getCurcentCount: (id: number) => number
+    getCurcentCount: (id: number) => number,
+    carItems: CarItems[]
 }
 
 const ShoppingCtx = createContext({} as ShoppingFn)
@@ -88,7 +89,8 @@ export function ShoppingContext({ children }: ShoppingContextProps) {
     }
 
     const getTotalCount = () => {
-        return carItems.length
+        const res = carItems.reduce((a, v) => { return a + v.count }, 0)
+        return res
     }
 
     const getCurcentCount = (id: number) => {
@@ -98,7 +100,7 @@ export function ShoppingContext({ children }: ShoppingContextProps) {
 
 
     return (
-        <ShoppingCtx.Provider value={{ addGood, subGood, getTotalCount, clearCar, getCurcentCount }}>
+        <ShoppingCtx.Provider value={{ addGood, subGood, getTotalCount, clearCar, getCurcentCount, carItems }}>
             {children}
         </ShoppingCtx.Provider >
     )

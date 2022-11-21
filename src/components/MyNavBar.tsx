@@ -7,11 +7,15 @@ import Nav from 'react-bootstrap/Nav';
 import { NavLink } from 'react-router-dom'
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import { useShoppingContext } from '../context/ShoppingContext'
+import data from '../data.json'
+
 
 const MyNavBar = () => {
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
+
+    const { carItems, getTotalCount } = useShoppingContext()
 
     return (
         <div>
@@ -40,7 +44,12 @@ const MyNavBar = () => {
                         >
                             <path d="M96 0C107.5 0 117.4 8.19 119.6 19.51L121.1 32H541.8C562.1 32 578.3 52.25 572.6 72.66L518.6 264.7C514.7 278.5 502.1 288 487.8 288H170.7L179.9 336H488C501.3 336 512 346.7 512 360C512 373.3 501.3 384 488 384H159.1C148.5 384 138.6 375.8 136.4 364.5L76.14 48H24C10.75 48 0 37.25 0 24C0 10.75 10.75 0 24 0H96zM128 464C128 437.5 149.5 416 176 416C202.5 416 224 437.5 224 464C224 490.5 202.5 512 176 512C149.5 512 128 490.5 128 464zM512 464C512 490.5 490.5 512 464 512C437.5 512 416 490.5 416 464C416 437.5 437.5 416 464 416C490.5 416 512 437.5 512 464z" />
                         </svg>
-                        <div className='d-flex justify-content-center align-items-center' style={{ height: '20px', width: '20px', position: 'absolute', right: '-10px', bottom: '-5px', backgroundColor: 'red', borderRadius: '50%', color: 'white' }}>3</div>
+                        <div
+                            className='d-flex justify-content-center align-items-center'
+                            style={{ height: '20px', width: '20px', position: 'absolute', right: '-10px', bottom: '-5px', backgroundColor: 'red', borderRadius: '50%', color: 'white', overflow: ' hidden', textOverflow: 'ellipsis' }}
+                        >
+                            {getTotalCount()}
+                        </div>
                     </Button>
                 </Container>
             </Navbar >
@@ -49,7 +58,15 @@ const MyNavBar = () => {
                     <Offcanvas.Title>购物车</Offcanvas.Title>
                 </Offcanvas.Header>
                 <Offcanvas.Body>
-
+                    {/* {
+                        carItems.map((item: {
+                            id: number;
+                            count: number;
+                            type: string
+                        }) => (
+                            data[item['type']]
+                        ))
+                    } */}
                 </Offcanvas.Body>
             </Offcanvas>
         </div>
