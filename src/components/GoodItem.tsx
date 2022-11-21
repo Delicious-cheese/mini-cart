@@ -13,6 +13,11 @@ type GoodItemProps = {
 const GoodItem = ({ name, imgUrl, id, type }: GoodItemProps) => {
     const { addGood, getCurcentCount } = useShoppingContext()
 
+    const handleAdd = (id: number, type: string) => {
+        if (!getCurcentCount(id))
+            addGood(id, type)
+    }
+
 
     return (
         <Card className='pt-2'>
@@ -45,7 +50,7 @@ const GoodItem = ({ name, imgUrl, id, type }: GoodItemProps) => {
                 <div className='d-flex justify-content-center align-items-center' >
                     <Button variant="primary"
                         style={{ backgroundColor: '#FD8848', border: 'none', position: 'relative' }}
-                        onClick={() => addGood(id, type)}
+                        onClick={() => handleAdd(id, type)}
                     >
                         加入购物车
                         {

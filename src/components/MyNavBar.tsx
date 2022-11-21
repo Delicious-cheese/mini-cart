@@ -6,6 +6,7 @@ import Button from 'react-bootstrap/Button';
 import Nav from 'react-bootstrap/Nav';
 import { NavLink } from 'react-router-dom'
 import Offcanvas from 'react-bootstrap/Offcanvas';
+import { useShoppingContext } from '../context/ShoppingContext'
 
 const MyNavBar = () => {
     const [show, setShow] = useState(false);
@@ -48,8 +49,7 @@ const MyNavBar = () => {
                     <Offcanvas.Title>购物车</Offcanvas.Title>
                 </Offcanvas.Header>
                 <Offcanvas.Body>
-                    Some text as placeholder. In real life you can have the elements you
-                    have chosen. Like, text, images, lists, etc.
+
                 </Offcanvas.Body>
             </Offcanvas>
         </div>
