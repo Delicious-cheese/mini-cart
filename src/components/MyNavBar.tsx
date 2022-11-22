@@ -20,12 +20,12 @@ const MyNavBar = () => {
         <div>
             <Navbar bg="light" style={{ height: '60px', position: 'relative' }}>
                 <Container>
-                    <Navbar.Brand href="/">
+                    <Navbar.Brand href="/clothes">
                         <img src={imgLogo} height="30" alt="" />
                     </Navbar.Brand>
                     {/* <Nav className="me-auto"> 靠左 */}
                     <Nav>
-                        <Nav.Link to='clothes' as={NavLink} >衣服</Nav.Link>
+                        <Nav.Link to='/clothes' as={NavLink} >衣服</Nav.Link>
                         <Nav.Link to='/electronic' as={NavLink}>电器</Nav.Link>
                         <Nav.Link to='/gift' as={NavLink}>纪念品</Nav.Link>
                     </Nav>
