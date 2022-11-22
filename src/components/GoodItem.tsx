@@ -7,10 +7,11 @@ type GoodItemProps = {
     price?: number,
     imgUrl: string,
     id: number,
-    type: string
+    type: string,
+    limit: number
 }
 
-const GoodItem = ({ name, imgUrl, id, type }: GoodItemProps) => {
+const GoodItem = ({ name, imgUrl, id, type, limit, price }: GoodItemProps) => {
     const { addGood, getCurcentCount } = useShoppingContext()
 
     const handleAdd = (id: number, type: string) => {
@@ -23,10 +24,12 @@ const GoodItem = ({ name, imgUrl, id, type }: GoodItemProps) => {
         <Card className='pt-2'>
             <Card.Img variant="top" src={imgUrl} height="260" style={{ objectFit: 'contain', }} />
             <Card.Body>
-                <Card.Title>{name}</Card.Title>
-                <Card.Text>
-                    Some quick example text to build on the card title and make up the
-                    bulk of the card's content.
+                <Card.Title className='text-center'>{name}</Card.Title>
+                <Card.Text className='d-flex justify-content-center'>
+                    <span>
+                        价格:{price}&yen;
+                        <span style={{ marginLeft: '7px', color: '#F4511E', fontSize: '.9em' }}>限量:{limit}</span>
+                    </span>
                 </Card.Text>
                 {/* {
                     count > 0
