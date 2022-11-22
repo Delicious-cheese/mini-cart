@@ -21,8 +21,12 @@ const GoodItem = ({ name, imgUrl, id, type, limit, price }: GoodItemProps) => {
 
 
     return (
-        <Card className='pt-2'>
-            <Card.Img variant="top" src={imgUrl} height="260" style={{ objectFit: 'contain', }} />
+        <Card className='p-2'>
+            <div
+                style={{ width: '70%', height: 0, paddingBottom: '70%', overflow: 'hidden', margin: '0 auto' }}
+            >
+                <Card.Img variant="top" src={imgUrl} style={{ objectFit: 'contain' }} />
+            </div>
             <Card.Body>
                 <Card.Title className='text-center'>{name}</Card.Title>
                 <Card.Text className='d-flex justify-content-center'>
