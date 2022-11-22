@@ -5,7 +5,6 @@ import data from '../data.json'
 import GoodItem from './GoodItem';
 
 const Clothes = () => {
-    // console.log(data)
     return (
         <Container className='pt-3'>
             <Row lg={3} md={2} xs={1} className="g-3">

@@ -31,25 +31,7 @@ const GoodItem = ({ name, imgUrl, id, type, limit, price }: GoodItemProps) => {
                         <span style={{ marginLeft: '7px', color: '#F4511E', fontSize: '.9em' }}>限量:{limit}</span>
                     </span>
                 </Card.Text>
-                {/* {
-                    count > 0
-                        ? (
-                            <div className='d-flex justify-content-center align-items-center'>
-                                <Button onClick={() => addGood(id, type)} variant="primary" className='rounded-circle d-flex justify-content-center align-items-center' size='sm' style={{ backgroundColor: '#FD8848', border: 'none', width: '26px', height: '26px', marginRight: '10px' }} >
-                                    <span style={{ fontSize: '16px' }}>+</span>
-                                </Button>
-                                <span>数量: {count}</span>
-                                <Button onClick={() => subGood(id)} variant="primary" className='rounded-circle d-flex justify-content-center align-items-center' size='sm' style={{ backgroundColor: '#FD8848', border: 'none', width: '26px', height: '26px', marginLeft: '10px' }} >
-                                    <span style={{ fontSize: '16px' }}>-</span>
-                                </Button>
-                            </div>
-                        )
-                        : (
-                            <div className='d-flex justify-content-center align-items-center'>
-                                <Button variant="primary" style={{ backgroundColor: '#FD8848', border: 'none' }} onClick={() => addGood(id, type)}>加入购物车</Button>
-                            </div>
-                        )
-                } */}
+
                 <div className='d-flex justify-content-center align-items-center' >
                     <Button variant="primary"
                         style={{ backgroundColor: '#FD8848', border: 'none', position: 'relative' }}

@@ -5,9 +5,7 @@ import imgLogo from '../assets/tao.png'
 import Button from 'react-bootstrap/Button';
 import Nav from 'react-bootstrap/Nav';
 import { NavLink } from 'react-router-dom'
-// import Offcanvas from 'react-bootstrap/Offcanvas';
 import { useShoppingContext } from '../context/ShoppingContext'
-// import data from '../data.json'
 import MyOffCanvas from './MyOffCanvas';
 
 
@@ -16,7 +14,6 @@ const MyNavBar = () => {
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
-    // const { carItems, getTotalCount, getCurcentCount, addGood, subGood, clearCar } = useShoppingContext()
     const { getTotalCount } = useShoppingContext()
 
     return (
