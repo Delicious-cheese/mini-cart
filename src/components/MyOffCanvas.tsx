@@ -15,6 +15,7 @@ const MyOffCanvas = ({ show, onHide }: MyOffCanvasProps) => {
     const { carItems, getTotalCount, getCurcentCount, addGood, subGood, clearCar } = useShoppingContext()
     let totalMonney = 0;
 
+
     const handleAddGood = (id: number, limitN: number, curN: number, type: string) => {
         if (curN < limitN)
             addGood(id, type)
@@ -57,7 +58,7 @@ const MyOffCanvas = ({ show, onHide }: MyOffCanvasProps) => {
                                             </div>
                                         </div>
                                         <div className='text-muted' style={{ fontSize: '.8rem', marginTop: '7px' }}>
-                                            单价: {res?.price}&yen;
+                                            单价: {res?.price}
                                         </div>
                                     </div>
                                 </div>
@@ -67,8 +68,8 @@ const MyOffCanvas = ({ show, onHide }: MyOffCanvasProps) => {
                 }
                 {
                     getTotalCount() > 0 && (
-                        <div className='ms-auto' style={{ width: '130px' }}>
-                            总计:{totalMonney}&yen;
+                        <div style={{ width: '100%', textAlign: 'right' }}>
+                            总计:{totalMonney.toLocaleString('en-US', { maximumFractionDigits: 2 })}
                         </div>
                     )
                 }
