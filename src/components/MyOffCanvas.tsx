@@ -6,11 +6,10 @@ import data from '../data.json'
 
 interface MyOffCanvasProps {
     show: boolean;
-    onHide: () => void;
-    placement: string
+    onHide: () => void
 }
 
-const MyOffCanvas = ({ show, onHide, placement }: MyOffCanvasProps) => {
+const MyOffCanvas = ({ show, onHide }: MyOffCanvasProps) => {
     // const [show, setShow] = useState(false);
     // const handleClose = () => setShow(false);
     // const handleShow = () => setShow(true);

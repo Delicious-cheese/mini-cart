@@ -55,7 +55,7 @@ const MyNavBar = () => {
                     </Button>
                 </Container>
             </Navbar >
-            <MyOffCanvas show={show} onHide={handleClose} placement="end" />
+            <MyOffCanvas show={show} onHide={handleClose} />
             {/* <Offcanvas show={show} onHide={handleClose} placement="end">
                 <Offcanvas.Header closeButton>
                     <Offcanvas.Title className='d-flex align-items-center'>
