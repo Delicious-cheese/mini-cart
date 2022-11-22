@@ -32,9 +32,9 @@ export function ShoppingContext({ children }: ShoppingContextProps) {
     const [carItems, setCarItems] = useState<CarItems[]>([])
 
     const addGood = (id: number, type: string) => {
-        console.log(carItems)
+        // console.log(carItems)
         const res = carItems.find(item => item.id === id)
-        console.log(res)
+        // console.log(res)
         if (res) {
             setCarItems(pre =>
                 pre.map(item => {
