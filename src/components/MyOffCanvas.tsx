@@ -25,7 +25,7 @@ const MyOffCanvas = ({ show, onHide }: MyOffCanvasProps) => {
             <Offcanvas.Header closeButton>
                 <Offcanvas.Title className='d-flex align-items-center'>
                     购物车
-                    <img src="src/assets/trash.png" width="20" height="20" alt="" style={{ marginLeft: '10px', cursor: ' pointer' }} onClick={clearCar} />
+                    <img src="http://127.0.0.1:5173/src/assets/trash.png" width="20" height="20" alt="" style={{ marginLeft: '10px', cursor: ' pointer' }} onClick={clearCar} />
                 </Offcanvas.Title>
             </Offcanvas.Header>
             <Offcanvas.Body>
@@ -40,7 +40,7 @@ const MyOffCanvas = ({ show, onHide }: MyOffCanvasProps) => {
                             (
                                 <div key={id} className="d-flex justify-content-between mb-3">
                                     <div>
-                                        <img src={res?.imgUrl} height="50" width="50" alt="" className='p-1' style={{ boxSizing: 'content-box', border: '1px solid #ccc', borderRadius: '5px', marginRight: '10px' }} />
+                                        <img src={"http://127.0.0.1:5173" + res?.imgUrl} height="50" width="50" alt="" className='p-1' style={{ boxSizing: 'content-box', border: '1px solid #ccc', borderRadius: '5px', marginRight: '10px' }} />
                                         <span>{res?.name}</span>
                                     </div>
 
