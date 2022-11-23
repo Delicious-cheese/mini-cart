@@ -68,7 +68,7 @@ const MyOffCanvas = ({ show, onHide }: MyOffCanvasProps) => {
                 {
                     getTotalCount() > 0 && (
                         <div style={{ width: '100%', textAlign: 'right' }}>
-                            总计:{totalMonney.toLocaleString('en-US', { maximumFractionDigits: 2 })}
+                            总计:&yen;{totalMonney.toLocaleString('en-US', { maximumFractionDigits: 2 })}
                         </div>
                     )
                 }
