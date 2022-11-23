@@ -2,15 +2,15 @@
     "rewrites": [
         {
             "source": "/clothes/(.*)",
-            "destination": "/api/"
+            "destination": "/setupProxy"
         },
         {
             "source": "/electronic",
-            "destination": "/api/"
+            "destination": "/setupProxy"
         },
         {
             "source": "/gift",
-            "destination": "/api/proxy"
+            "destination": "/setupProxy"
         }
     ]
 }
