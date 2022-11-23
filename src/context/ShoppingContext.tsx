@@ -1,4 +1,4 @@
-import React, { useContext, createContext, ReactNode, useState } from 'react'
+import React, { useContext, createContext, ReactNode, useState, useEffect } from 'react'
 
 
 interface ShoppingContextProps {
@@ -29,7 +29,17 @@ export function useShoppingContext() {
 }
 
 export function ShoppingContext({ children }: ShoppingContextProps) {
-    const [carItems, setCarItems] = useState<CarItems[]>([])
+    // const [carItems, setCarItems] = useState<CarItems[]>([])
+
+    const [carItems, setCarItems] = useState<CarItems[]>(() => {
+        let v = localStorage.getItem('shopping')
+        if (v) return JSON.parse(v)
+        else return []
+    })
+
+    useEffect(() => {
+        localStorage.setItem('shopping', JSON.stringify(carItems))
+    }, [carItems])
 
     const addGood = (id: number, type: string) => {
         const res = carItems.find(item => item.id === id)
