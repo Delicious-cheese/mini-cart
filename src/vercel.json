@@ -1,0 +1,16 @@
+{
+    "rewrites": [
+        {
+            "source": "/clothes/(.*)",
+            "destination": "/api/"
+        },
+        {
+            "source": "/electronic",
+            "destination": "/api/"
+        },
+        {
+            "source": "/gift",
+            "destination": "/api/proxy"
+        }
+    ]
+}
