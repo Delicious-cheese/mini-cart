@@ -25,7 +25,7 @@ const GoodItem = ({ name, imgUrl, id, type, limit, price }: GoodItemProps) => {
             <div
                 style={{ width: '70%', height: 0, paddingBottom: '70%', overflow: 'hidden', margin: '0 auto' }}
             >
-                <Card.Img variant="top" src={imgUrl} style={{ objectFit: 'contain' }} />
+                <Card.Img variant="top" src={"http://127.0.0.1:5173/" + imgUrl} style={{ objectFit: 'contain' }} />
             </div>
             <Card.Body>
                 <Card.Title className='text-center'>{name}</Card.Title>
